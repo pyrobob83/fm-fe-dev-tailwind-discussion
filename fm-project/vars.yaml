@@ -1,0 +1,8 @@
+database_name: None
+database_server: None
+database_version: None
+node_version: 14
+php_version: 7.4
+project_name: fm_fe-dev-tw
+public_dir: public
+subdomain: fe-dev-tw

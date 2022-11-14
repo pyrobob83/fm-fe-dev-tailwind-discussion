@@ -1,0 +1,14 @@
+{
+    "name": "fe-dev-tw",
+    "version": "1.0.0",
+    "description": "Examples for review in our FM FE Dev call",
+    "author": "Foster Made",
+    "license": "MIT",
+    "scripts": {
+        "watch": "npx tailwindcss -i ./css/input.css -o ./public/output.css --watch"
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "^0.5.8",
+        "tailwindcss": "^3.2.4"
+    }
+}
