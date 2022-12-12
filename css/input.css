@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    a, button, .animated {
+        @apply transition duration-300 ease-in-out;
+    }
+    .bordered {
+        @apply border border-gray-500;
+    }
+    .space-vert {
+        @apply py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-12;
+    }
+    .space-vert-lg {
+        @apply py-8 md:py-12 lg:py-16 xl:py-20 2xl:py-24;
+    }
+    .block {
+        @apply container px-8 mx-auto;
+    }
+    
+}

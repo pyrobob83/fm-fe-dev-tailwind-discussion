@@ -7,14 +7,21 @@
 </head>
 <body>
 
-<section class="py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-12">
-    <div class="container border border-gray-500">
-        This is a default tailwind "container" - all it does is add a max-width at each responsive step. Doesn't include centering the div.
+<section class="space-vert">
+    <div class="block space-vert bordered">
+        <div class="prose max-w-none">
+            <p>Same setup as <a class="hover:text-red-500" href="/">before</a>, but using abstraction for:</p>
+            <ul>
+                <li>`space-vert` class applies vertical spacing that changes between responsive steps</li>
+                <li>`block` class applies TW's `container` class for max-width, `mx-auto` to center the div in the viewport and `px-8` to add horizontal padding to ensure content never touches the edge of the device</li>
+                <li>`bordered` class to apply the block borders that help illustrate</li>
+            </ul>
+        </div>
     </div>
 </section>
 
-<section class="py-4 bg-gray-200 md:py-6 lg:py-8 xl:py-10 2xl:py-12">
-    <div class="container px-8 mx-auto border border-gray-500 border-gray-500py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-12">
+<section class="bg-gray-200 space-vert">
+    <div class="block space-vert bordered">
         <div class="prose max-w-none">
             <p>This is a typical example of a container how I'd normally use it (referred to as a 'block'):</p>
             <ul>
@@ -27,13 +34,13 @@
     </div>
 </section>
 
-<section class="py-4 md:py-6 lg:py-8 xl:py-10 2xl:py-12">
-    <div class="container px-8 py-4 mx-auto border border-gray-500 md:py-6 lg:py-8 xl:py-10 2xl:py-12">
+<section class="space-vert">
+    <div class="block space-vert bordered">
         <div class="prose max-w-none">
             <p>Example of two 'blocks' inside the same section... This is the first 'block'.</p>
         </div>
     </div>
-    <div class="container px-8 py-4 mx-auto border border-gray-500 md:py-6 lg:py-8 xl:py-10 2xl:py-12">
+    <div class="block space-vert bordered">
         <div class="prose max-w-none">
             <p>This is the second 'block'.  If necessary, the top-padding on this element could be reduced or removed to make the two inner 'blocks' seem more connected.</p>
         </div>
@@ -41,15 +48,15 @@
 </section>
 
 
-<section class="py-8 bg-gray-200 md:py-12 lg:py-16 xl:py-20 2xl:py-24">
-    <div class="container px-8 mx-auto border border-gray-500">
+<section class="bg-gray-200 space-vert-lg">
+    <div class="block bordered">
         <div class="prose max-w-none">
-            <p>Alternate method that assumes only one 'block' per 'section' - in this scenario all the padding can be on the 'section' so the 'blocks' don't have their own vertical padding and instead the section has double.</p>
+            <p>Alternate method that assumes only one 'block' per 'section' - in this scenario all the padding can be on the 'section' so the 'blocks' don't have their own vertical padding and instead the section has double, implemented using the `space-vert-lg` abstraction class.</p>
         </div>
     </div>
 </section>
-<section class="py-8 bg-gray-200 md:py-12 lg:py-16 xl:py-20 2xl:py-24 !pt-0">
-    <div class="container px-8 mx-auto border border-gray-500">
+<section class="bg-gray-200 space-vert-lg !pt-0">
+    <div class="block bordered">
         <div class="prose max-w-none">
             <p>In this scenario, we have to explicitly remove the top-padding on the second 'section' to make the two sections seem as one without double-spacing.</p>
             <p>The downside of this method is that you can't ever have two 'blocks' appear to be inside the same section - for example if you wanted a background image on the 'section' but with varying 'blocks' inside of it.</p>
